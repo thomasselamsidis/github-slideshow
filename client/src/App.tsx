@@ -8,6 +8,7 @@ import AdminDashboard from "./pages/AdminDashboard";
 import AdminCalendar from "./pages/AdminCalendar";
 import AdminClients from "./pages/AdminClients";
 import AdminServices from "./pages/AdminServices";
+import AdminRewards from "./pages/AdminRewards";
 
 function NavBar() {
   const linkClass = ({ isActive }: { isActive: boolean }) =>
@@ -42,6 +43,9 @@ function NavBar() {
       <NavLink to="/admin/services" className={linkClass}>
         Services
       </NavLink>
+      <NavLink to="/admin/rewards" className={linkClass}>
+        Rewards
+      </NavLink>
     </nav>
   );
 }
@@ -61,6 +65,7 @@ export default function App() {
           <Route path="/admin/calendar" element={<AdminCalendar />} />
           <Route path="/admin/clients" element={<AdminClients />} />
           <Route path="/admin/services" element={<AdminServices />} />
+          <Route path="/admin/rewards" element={<AdminRewards />} />
         </Routes>
       </main>
     </div>
