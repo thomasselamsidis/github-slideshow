@@ -7,6 +7,7 @@ import Profile from "./pages/Profile";
 import AdminDashboard from "./pages/AdminDashboard";
 import AdminCalendar from "./pages/AdminCalendar";
 import AdminClients from "./pages/AdminClients";
+import AdminServices from "./pages/AdminServices";
 
 function NavBar() {
   const linkClass = ({ isActive }: { isActive: boolean }) =>
@@ -38,6 +39,9 @@ function NavBar() {
       <NavLink to="/admin/clients" className={linkClass}>
         Clients
       </NavLink>
+      <NavLink to="/admin/services" className={linkClass}>
+        Services
+      </NavLink>
     </nav>
   );
 }
@@ -56,6 +60,7 @@ export default function App() {
           <Route path="/admin" element={<AdminDashboard />} />
           <Route path="/admin/calendar" element={<AdminCalendar />} />
           <Route path="/admin/clients" element={<AdminClients />} />
+          <Route path="/admin/services" element={<AdminServices />} />
         </Routes>
       </main>
     </div>
